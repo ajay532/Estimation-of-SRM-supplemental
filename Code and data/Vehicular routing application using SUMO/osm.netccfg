@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="/home/ajay/../../usr/local/share/sumo-0.32.0/data/typemap/osmNetconvert.typ.xml,/home/ajay/../../usr/local/share/sumo-0.32.0/data/typemap/osmNetconvertUrbanDe.typ.xml,/home/ajay/../../usr/local/share/sumo-0.32.0/data/typemap/osmNetconvertPedestrians.typ.xml,/home/ajay/../../usr/local/share/sumo-0.32.0/data/typemap/osmNetconvertShips.typ.xml,/home/ajay/../../usr/local/share/sumo-0.32.0/data/typemap/osmNetconvertBicycle.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/ajay/Downloads/sumo-0.32.0/tools/2018-10-15-11-34-24/osm.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+        <crossings.guess value="true"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+    </report>
+
+</configuration>
